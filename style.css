@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    color: #222;
+    text-align: center;
+}
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+.container {
+    width: 500px;
+    padding: 0px 10px;
+    margin: 10px auto;
+}
+
+#pantalla, h1 {
+    background-color: #065AC5;
+    position: relative;
+    box-shadow: 0 4px 8px 0 #000;
+}
+
+#pantalla {
+    width: 500px;
+    height: 500px;
+}
+
+#ganar {
+    position: absolute;
+    left: 10px;
+    top: 440px;
+}
+
+#puntos {
+    position: absolute;
+    left: 10px;
+    top: 440px;
+}
+
+.puntaje {
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    position: relative;
+    float: left;
+}
+
+.puntuacion {
+    color: red;
+    font-weight: bold;
+}
+
+
+.escena {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 20px 0;
+    perspective: 600px;
+}
+
+.carta {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+
+.carta.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.carta.bye {
+    transition:1s;
+    visibility:hidden;
+}
+
+.carta_ver {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+}
+.carta_frente{
+    background: crimson;
+  }
+
+.carta_detras {
+    background: slateblue;
+    transform: rotateY(180deg);
+}
